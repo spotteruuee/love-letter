@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff4f6">
+<title>Одно важное сообщение ❤️</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;padding:22px;
+    font-family:ui-rounded,system-ui,-apple-system,"Segoe UI",sans-serif;color:#4b2633;
+    background:radial-gradient(circle at 15% 15%,#ffe2e9 0,transparent 32%),
+      radial-gradient(circle at 85% 80%,#f7dff0 0,transparent 35%),#fff7f8}
+  .wrap{width:min(100%,520px)}
+  .top{text-align:center;margin-bottom:18px;color:#a45b73;font-size:13px;letter-spacing:.13em;text-transform:uppercase}
+  .card{background:rgba(255,255,255,.88);border:1px solid #f5d6df;border-radius:28px;
+    padding:28px 24px;box-shadow:0 18px 55px rgba(137,65,91,.12);text-align:center}
+  .heart{font-size:42px;animation:pulse 1.8s infinite}
+  h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(29px,8vw,39px);line-height:1.15;margin:12px 0;color:#8e3e5b}
+  .sub{color:#956c7b;line-height:1.6;margin:0 auto 22px;max-width:360px}
+  button{border:0;border-radius:999px;background:#a8496b;color:white;padding:15px 23px;
+    font-size:16px;font-weight:650;box-shadow:0 8px 20px #a8496b35;cursor:pointer}
+  button:active{transform:scale(.98)}
+  .letter{display:none;text-align:left;margin-top:24px;padding-top:22px;border-top:1px solid #f1dce3;
+    font-family:Georgia,serif;font-size:18px;line-height:1.72;animation:appear .8s ease}
+  .letter p{margin:0 0 15px}
+  .sign{text-align:right;color:#a8496b;font-style:italic;margin-top:20px}
+  .foot{font:12px system-ui;color:#b28a98;text-align:center;margin-top:18px}
+  .code{display:inline-block;background:#fff2f5;border:1px solid #f4d8e1;border-radius:12px;
+    padding:9px 12px;color:#9c4967;font:12px ui-monospace,monospace;margin-top:5px}
+  .tiny{font:11px ui-monospace,monospace;color:#bd8a9c;margin-top:20px}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+  @keyframes appear{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">private message · priority: forever</div>
+  <section class="card">
+    <div class="heart">💌</div>
+    <h1>Тебе пришло<br>одно важное сообщение</h1>
+    <p class="sub">Не рабочее уведомление. Не срочный тикет. Просто кое-что, что давно хотелось сказать.</p>
+    <button id="open" type="button">Открыть сообщение ❤️</button>
+    <article class="letter" id="letter" aria-live="polite">
+      <p>Знаешь, я привык искать причины, объяснять всё логикой и верить тому, что можно проверить. Но с тобой есть одна вещь, которую никакими формулами не посчитать.</p>
+      <p>То, как мне становится спокойно от одной мысли о тебе. Как обычный день делается лучше после твоего сообщения. Как среди тысячи дел я всё равно мысленно возвращаюсь к тебе.</p>
+      <p>Если бы моё сердце было системой, ты была бы не просто её любимой функцией. Ты была бы смыслом, ради которого хочется, чтобы всё работало.</p>
+      <p>Я не обещаю, что каждый день будет идеальным, но обещаю каждый день находить новые причины делать тебя счастливой, поддерживать тебя, слышать и беречь. И даже когда будет непросто, я всё равно буду выбирать нас.</p>
+      <p>И если жизнь когда-нибудь предложит мне выбрать самое ценное, я снова и снова выберу тебя. Без сомнений. Без резервной копии. Навсегда.</p>
+      <p class="sign">UmopicT ❤️</p>
+      <div class="tiny">STATUS: deeply in love · CONNECTION: always</div>
+    </article>
+  </section>
+  <div class="foot">сделано вручную · отправлено с любовью</div>
+</main>
+<script>
+  const button = document.getElementById('open');
+  const letter = document.getElementById('letter');
+  button.addEventListener('click', () => {
+    letter.style.display = 'block';
+    button.textContent = 'Сообщение доставлено ❤️';
+    button.disabled = true;
+    letter.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+</script>
+</body>
+</html>
